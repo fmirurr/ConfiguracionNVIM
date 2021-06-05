@@ -1,3 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"]
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html", "es5", "js", "python", "java"],
+    "java.home": "C:\\Program Files\\Java\\jdk-16.0.1",
+    "java.configuration.runtimes": [
+	{
+	    "name": "jdk-16.0.1",
+	    "path": "C:\\Program Files\\Java\\jdk-16.0.1\\bin"
+	}
+    ]
 }
