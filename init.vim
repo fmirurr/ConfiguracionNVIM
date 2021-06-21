@@ -15,20 +15,19 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim'
-Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'townk/vim-autoclose'
 call plug#end()
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
-
+colorscheme "dracula"
+let g:airline_theme = "dracula"
 let mapleader = " "
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
-nmap <leader>f <Plug>(coc-format-selected)
+nmap <Leader>f  <Plug>(coc-format-selected)
 
 nmap <Leader>gd <Plug>(coc-definition)
 
