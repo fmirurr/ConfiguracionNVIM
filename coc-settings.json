@@ -1,10 +1,16 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html", "es5", "js", "typescript", "python"],
-    "java.home": "C:\\Program Files\\Java\\jdk-16.0.1",
-    "java.configuration.runtimes": [
-	{
-	    "name": "jdk-16.0.1",
-	    "path": "C:\\Program Files\\Java\\jdk-16.0.1\\bin"
-	}
-    ]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "c",
+    "cpp",
+    "markdown",
+    "html",
+    "es5",
+    "js",
+    "ts",
+    "typescript",
+    "python",
+    "json"
+  ],
+  "clangd.path": "/home/francisco/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
 }

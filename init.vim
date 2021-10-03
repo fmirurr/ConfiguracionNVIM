@@ -10,19 +10,23 @@ set showmatch
 set sw=4
 set relativenumber
 
-call plug#begin('/plugged')
+call plug#begin()
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
+Plug 'leafgarland/typescript-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'townk/vim-autoclose'
 call plug#end()
 
-colorscheme "dracula"
-let g:airline_theme = "dracula"
+let g:coc_disable_startup_warning = 1
+
+colorscheme gruvbox
+set background=dark
+let g:airline_theme = "apprentice"
 let mapleader = " "
 
 nmap <Leader>s <Plug>(easymotion-s2)
