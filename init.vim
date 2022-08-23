@@ -18,7 +18,7 @@ Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim'
 call plug#end()
 
