@@ -1,11 +1,15 @@
+syntax on
 set tabstop=2
+set relativenumber
+set number
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set clipboard=unnamed
 
 call plug#begin()
-  " Colorscheme
-  Plug 'joshdick/onedark.vim'
+" Colorscheme
+Plug 'EdenEast/nightfox.nvim' 
 
   " LSP Support
   Plug 'neovim/nvim-lspconfig'
@@ -34,12 +38,14 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'prettier/vim-prettier'
 call plug#end()
 
 try
   set signcolumn=yes
   set termguicolors
-  colorscheme onedark
+  colorscheme nightfox
+  let g:airline_theme='night_owl'
 catch
   " do nothing
 endtry
@@ -59,3 +65,6 @@ nmap <Leader>nt :NERDTreeFind<CR>
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <Leader>f :Prettier<CR>
+
+let g:airline_powerline_fonts = 1
