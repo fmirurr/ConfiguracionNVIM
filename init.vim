@@ -1,15 +1,17 @@
-syntax on
-set tabstop=2
-set relativenumber
 set number
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+set mouse=a
+set numberwidth=1
 set clipboard=unnamed
+syntax enable
+set showcmd
+set ruler
+set encoding=utf-8
+set showmatch
+set sw=4
+set relativenumber
 
-call plug#begin()
-" Colorscheme
-Plug 'EdenEast/nightfox.nvim' 
+call plug#begin("C:/Users/fcomi/AppData/Local/nvim-data/site/autoload")
+  Plug 'EdenEast/nightfox.nvim' 
 
   " LSP Support
   Plug 'neovim/nvim-lspconfig'
