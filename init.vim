@@ -64,9 +64,12 @@ EOF
 let mapleader = " "
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>Y "+y
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+
 nmap <Leader>f :Prettier<CR>
+nmap <Leader>b :!black .<CR>
 
 let g:airline_powerline_fonts = 1
