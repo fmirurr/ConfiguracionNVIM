@@ -5,13 +5,13 @@ set clipboard=unnamed
 syntax enable
 set showcmd
 set ruler
-set encoding=utf-8
+set encoding=UTF-8
 set showmatch
 set sw=4
 set relativenumber
 
-call plug#begin("C:/Users/fcomi/AppData/Local/nvim-data/site/autoload")
-  Plug 'EdenEast/nightfox.nvim' 
+call plug#begin()
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
   " LSP Support
   Plug 'neovim/nvim-lspconfig'
@@ -40,13 +40,13 @@ call plug#begin("C:/Users/fcomi/AppData/Local/nvim-data/site/autoload")
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'prettier/vim-prettier'
+  Plug 'prettier/vim-prettier', {'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html']}
 call plug#end()
 
 try
   set signcolumn=yes
   set termguicolors
-  colorscheme nightfox
+  colorscheme tokyonight-moon
   let g:airline_theme='night_owl'
 catch
   " do nothing
@@ -59,12 +59,10 @@ lsp.preset('recommended')
 lsp.setup()
 EOF
 
-
 " Shortcut
 let mapleader = " "
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
-nmap <Leader>Y "+y
 
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
