@@ -18,6 +18,9 @@ call plug#begin()
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim'
 
+  " Debugger
+  Plug 'puremourning/vimspector'
+
   " Autocompletion
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-buffer'
@@ -69,5 +72,23 @@ nmap <Leader>q :q<CR>
 
 nmap <Leader>f :Prettier<CR>
 nmap <Leader>b :!black .<CR>
+
+
+" Shortcut Debugger
+nnoremap <F5> :call vimspector#Launch()<CR>
+nnoremap <Leader>r<F5> :call vimspector#Reset()<CR>
+nnoremap <Leader><F8> :call vimspector#Continue()<CR>
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <F8> <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
+
+" Shortcut resize
+nnoremap <C-Left> :vertical resize +3<CR>
+nnoremap <C-Right> :vertical resize -3<CR>
+nnoremap <C-Up> :resize +3<CR>
+nnoremap <C-Down> :resize -3<CR>
 
 let g:airline_powerline_fonts = 1
