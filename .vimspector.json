@@ -2,12 +2,17 @@
 {
   "configurations": {
     "django": {
-      "adapter": "debugpy", // install in env
+      "adapter": "debugpy",
+      "breakpoints": {
+        "exception": {
+          "all": "N",
+          "uncaught": "N"
+        }
+      },
       "configuration": {
         "request": "launch",
-	      "python": "~/anaconda3/envs/django-env/bin/python3", // path env python
+	      "python": "~/anaconda3/envs/django-env/bin/python3",
         "stopOnEntry": true,
-        "console": "integratedTerminal",
         "program": "${workspaceRoot}/manage.py",
         "cwd": "${workspaceRoot}",
         "args": ["runserver", "localhost:8000"],
