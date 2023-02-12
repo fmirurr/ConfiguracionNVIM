@@ -20,6 +20,7 @@ call plug#begin()
 
   " Debugger
   Plug 'puremourning/vimspector'
+  Plug 'eliba2/vim-node-inspect'
 
   " Autocompletion
   Plug 'hrsh7th/nvim-cmp'
@@ -75,7 +76,7 @@ nmap <Leader>b :!black .<CR>
 
 
 " Shortcut Debugger
-nnoremap <F5> :call vimspector#Launch()<CR>
+nnoremap <Leader><F5> :call vimspector#Launch()<CR>
 nnoremap <Leader>r<F5> :call vimspector#Reset()<CR>
 nnoremap <Leader><F8> :call vimspector#Continue()<CR>
 nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
@@ -84,6 +85,14 @@ nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <F8> <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
+
+nnoremap <silent><F4> :NodeInspectStart<cr>
+nnoremap <silent><F5> :NodeInspectRun<cr>
+nnoremap <silent><F6> :NodeInspectConnect("127.0.0.1:9229")<cr>
+nnoremap <silent><F7> :NodeInspectStepInto<cr>
+nnoremap <silent><F8> :NodeInspectStepOver<cr>
+nnoremap <silent><F9> :NodeInspectToggleBreakpoint<cr>
+nnoremap <silent><F10> :NodeInspectStop<cr>
 
 " Shortcut resize
 nnoremap <C-Left> :vertical resize +3<CR>
