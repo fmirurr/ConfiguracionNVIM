@@ -7,7 +7,7 @@ set showcmd
 set ruler
 set encoding=UTF-8
 set showmatch
-set sw=4
+set tabstop=4
 set relativenumber
 
 call plug#begin()
