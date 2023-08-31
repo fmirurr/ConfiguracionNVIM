@@ -59,9 +59,15 @@ endtry
 
 lua <<EOF
 local lsp = require('lsp-zero')
-
 lsp.preset('recommended')
 lsp.setup()
+
+local cmp = require('cmp')
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }
+})
 EOF
 
 " Shortcut
