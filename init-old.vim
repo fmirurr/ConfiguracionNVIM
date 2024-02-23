@@ -18,7 +18,7 @@ Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/rstacruz/vim-closer' " For brackets autocompletion
-
+Plug 'puremourning/vimspector'
 
 " Auto-completion  For Javascript
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " this is for auto complete, prettier and tslinting
@@ -42,6 +42,14 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-q> :q<CR>
+nnoremap <C-Left> :vertical resize +3<CR>
+nnoremap <C-Right> :vertical resize -3<CR>
+nnoremap <C-Up> :resize +3<CR>
+nnoremap <C-Down> :resize -3<CR>
+nnoremap <S-Left> <C-w>h
+nnoremap <S-Down> <C-w>j
+nnoremap <S-Up> <C-w>k
+nnoremap <S-Right> <C-w>l
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -51,7 +59,7 @@ nmap <F8> :TagbarToggle<CR>
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
-
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 " --- Just Some Notes ---
 " :PlugClean :PlugInstall :UpdateRemotePlugins
 "
