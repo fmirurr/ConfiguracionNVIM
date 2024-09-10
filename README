@@ -1,2 +1,12 @@
-"WINdows" Todo debe ir en la carpeta nvim dentro del directorio de ~/{User}/AppData/Local dentro de la misma debe ir descomprimido nvim
-"LInux" Debe ir en  ~/.config/nvim/
+# Instalación
+
+
+
+
+## Pasos
+
+ - [Ingresar a LazyVim](https://www.lazyvim.org/)
+ - Seguir lo pasos de instalacion
+ - iniciar nvim en la terminal para que se instalen solo los plugins 
+
+
