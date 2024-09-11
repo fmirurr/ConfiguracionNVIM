@@ -1,0 +1,38 @@
+// launch para django
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Django",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\manage.py",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "runserver"
+      ],
+      "django": true,
+      "justMyCode": true
+    }
+  ]
+}
+
+// launch para nodejs
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "type": "node",
+      "request": "launch",
+      "name": "express debug",
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/index.js",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5858
+    }
+  ]
+}
