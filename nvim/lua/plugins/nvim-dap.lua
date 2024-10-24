@@ -55,7 +55,7 @@ return {
       -- setup dap config by VsCode launch.json file
       local vscode = require("dap.ext.vscode")
       local json = require("plenary.json")
-      v212552726scode.json_decode = function(str)
+      vscode.json_decode = function(str)
         return vim.json.decode(json.json_strip_comments(str))
       end
 
